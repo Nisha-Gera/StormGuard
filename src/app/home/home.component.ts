@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   weatherData: any = {};
   isLocationVisible = false;
   error:string = '';
+
   constructor(private apiService: APIService) {
     this.TodayDate = new Date();
   }
