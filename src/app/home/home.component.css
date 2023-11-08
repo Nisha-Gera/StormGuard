@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+      rgba(255, 220, 21, 0.7),
+        rgba(178, 186, 219, 0.7),
+        rgba(0, 47, 231, 0.7)
+      ),
+      url(/weatherApp/src/assets/images/image.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  
+  }
+  .navbar {
+      cursor: pointer;
+    /* background: rgb(119, 119, 247); */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: cursive;
+    font-weight: bold;
+    color: #000;
+    font-size: 40px;
+    padding: 2% 6%;
+  }
+  .navbar{
+      flex: 1;
+      text-align: right;
+  }
+  .navbar ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position:relative;
+  }
+  .navbar ul li a{
+      
+      color: #000;
+      text-decoration: none;
+      font-size: 25px;
+  }
+  .navbar li a{
+      padding: 8px 12px;
+      color: #000;
+      text-decoration: none;
+      font-size: 25px;
+  }
+  .heading, .description {
+  text-align: center;
+  justify-items: center;
+  color: #000;
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .heading{
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 40px;
+      margin-bottom: -20px;
+  }
+  .description{
+      margin: 40px;
+      font-size: 20px;
+  }
+  .input-area{
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+  }
+  .input{
+      padding: 10px;
+      width: 400px;
+      height: 15px;
+      border: none;
+      border-radius: 10px;
+      color: #000;
+      margin: 10px;
+  }
+  .btn{
+      background: rgba(255, 220, 21, 0.7) ;
+      width: 100px;
+      color: #000;
+      font-weight: bold;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 15px;
+  }
+  .display-content {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Use justify-content, not justify-items */
+    margin: 0 auto; /* To horizontally center within the parent container */
+  }
+  .error{
+    color: red;
+  }
+  
+  

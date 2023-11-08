@@ -1,0 +1,66 @@
+<div class="login-container header">
+    <div class="navbar">
+      StormGuard
+      <ul>
+        <li>
+          <a href="#" id="menu_toggle">City</a>
+        </li>
+        <li>
+          <a href="#" id="menu_toggle">Weather</a>
+        </li>
+        <li>
+          <a href="#" id="menu_toggle">Map</a>
+        </li>
+        <li>
+          <a href="#" id="menu_toggle">Setting</a>
+        </li>
+      </ul>
+    </div>
+    <div class="heading">Welcome to StormGuard!</div>
+    <div class="description">
+      StormGuard is your essential tool to safeguard yourself from unexpected
+      situations when embarking on a long drive or attending an event.Stay
+      informed about the current conditions and events in your local area. Don't
+      leave anything to chance; StormGuard has got you covered!
+    </div>
+    <div class="input-area">
+      <label for="search">Search here your city weather !</label> <br />
+      <form action="" #inputForm="ngForm">
+        <input type="text" class="input" id="cityName" required />
+        <div class="error">{{error}}</div>
+        <div class="display-content" *ngIf="isLocationVisible">
+          <div>
+            <p class="date">
+              {{ TodayDate | date:'EEEE, MMM dd, yyyy' }}
+            </p>
+  
+            <p class="city">City: {{ weatherData.name }}</p>
+            <p class="country">Country: {{ weatherData.sys?.country }}</p>
+            <p class="temp">
+              Temperature: {{ (weatherData.main?.temp - 273) | number:'2.1-2'
+              }}&deg;C
+            </p>
+            <div class="desc">
+              Description : {{ weatherData.weather[0]?.description }}
+              <p class="humidity">Humidity: {{ weatherData.main?.humidity }}%</p>
+              <p class="wind">Wind: {{ weatherData.wind?.speed }} km/s</p>
+            </div>
+          </div>
+          <!-- <div [innerHTML]="numberOfRoomsAvailable"></div> -->
+        </div>
+        <div>
+          <button class="btn btn-primary" (click)="getWeatherDataByCity()">
+            Get Weather
+          </button>
+          <button
+            class="btn btn-primary"
+            *ngIf="isLocationVisible==true"
+            (click)="Clear(inputForm)"
+          >
+            Clear Results
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
